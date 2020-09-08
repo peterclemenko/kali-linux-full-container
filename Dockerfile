@@ -19,9 +19,6 @@ RUN apt-get install -y git colordiff colortail unzip vim tmux xterm zsh curl tel
 RUN git clone https://github.com/arialdomartini/oh-my-git.git ~/.oh-my-git && \
     echo source ~/.oh-my-git/prompt.sh >> /etc/profile
 
-# secLists!
-RUN git clone https://github.com/danielmiessler/SecLists /usr/share/seclists
-
 # w3af
 RUN git clone https://github.com/andresriancho/w3af.git /opt/w3af && \
     apt-get install -y libssl-dev libxml2-dev libxslt1-dev zlib1g-dev python-dev python-pybloomfiltermmap ; \
