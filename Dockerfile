@@ -7,6 +7,13 @@ RUN apt-get -y update && apt-get -y upgrade && \
    kali-linux-large \
    pciutils \
    iputils \
+   iputils-arping \
+   iputils-clockdiff \
+   iputils-ping \
+   iputils-tracepath \
+   lsm \
+   
+   
    network-manager network-manager-gnome network-manager-openvpn-gnome network-manager-openvpn \
    bash-completion && \
    apt-get autoremove -y && \
