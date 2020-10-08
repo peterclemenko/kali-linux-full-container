@@ -6,6 +6,7 @@ RUN apt-get -y update && apt-get -y upgrade && \
    DEBIAN_FRONTEND=noninteractive apt-get install -y \
    kali-linux-large \
    pciutils \
+   iputils-ping \
    network-manager network-manager-gnome network-manager-openvpn-gnome network-manager-openvpn \
    bash-completion && \
    apt-get autoremove -y && \
