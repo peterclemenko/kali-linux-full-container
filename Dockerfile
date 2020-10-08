@@ -26,4 +26,17 @@ RUN updatedb && \
     apt-get autoremove -y && \
     apt-get clean 
 
+RUN wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+
+RUN dpkg -i packages-microsoft-prod.deb
+RUN apt-get update
+RUN apt-get install apt-transport-https
+RUN apt-get update
+RUN apt-get install dotnet-sdk-2.2
+
+RUN git clone --recurse-submodules https://github.com/cobbr/Covenant /pentest/covenant
+WORKDIR /pentest/covenant/Covenant
+
+RUN dotnet build
+
 CMD ["/bin/bash", "--init-file", "/etc/profile"]
