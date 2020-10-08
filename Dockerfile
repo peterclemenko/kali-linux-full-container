@@ -6,7 +6,6 @@ RUN apt-get -y update && apt-get -y upgrade && \
    DEBIAN_FRONTEND=noninteractive apt-get install -y \
    kali-linux-large \
    pciutils \
-   iputils \
    iputils-arping \
    iputils-clockdiff \
    iputils-ping \
