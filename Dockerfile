@@ -32,6 +32,4 @@ RUN updatedb && \
     apt-get autoremove -y && \
     apt-get clean 
 
-RUN dotnet build
-
 CMD ["/bin/bash", "--init-file", "/etc/profile"]
